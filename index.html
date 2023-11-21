@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 손세영 - 그라데이션 인트로 </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <!-- html에 불러오는 google fonts 주소 -->
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap'); -> css에 불러오는 google fonts 주소 */
+
+        body {
+            background: url("./images/Rectangle.svg")no-repeat center/cover;
+            height: 100vh;
+            /* 보여지는 높이값 */
+            color: #fff;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .ani {
+            font-size: 150px;
+            font-family: 'DM Serif Display', serif;
+            animation: slide-up 1s ease both;
+            /* ease -> 처음과 끝 느리게 시작, 끝나는 속도 빠르게.
+            both -> 애니메이션이 완료 된 후에도 최종 상태를 유지함. 움직임이 끝나면 멈춤. */
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+                /* Y축 이동 */
+            }
+
+            to {
+                transform: translateY(0%);
+            }
+        }
+
+        .S {
+            animation-delay: 0s;
+        }
+
+        .Y {
+            animation-delay: 1s;
+        }
+
+        /* from -> 시작. to -> 끝 */
+    </style>
+</head>
+
+<body>
+    <!-- .box>.ani.A{A}*2 한 뒤 A를 S,Y로 바꿨음 -->
+    <div class="box">
+        <div class="ani S">S</div>
+        <div class="ani Y">Y</div>
+    </div>
+</body>
+
+</html>
